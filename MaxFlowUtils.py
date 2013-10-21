@@ -1,6 +1,6 @@
 import math, collections
 from MaxFlowLib import FlowEdge
-import matplotlib.pyplot as plt
+# import matplotlib.pyplot as plt
 import numpy as np
 import copy
 _DISTANCE = .4 	# km

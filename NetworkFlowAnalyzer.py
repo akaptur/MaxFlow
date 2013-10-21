@@ -11,7 +11,7 @@ usage: run NetworkFlowAnalyzer "citybike.json" <start-station> <end-station>
 '''
 import json
 import argparse
-import matplotlib.pyplot as plt
+# import matplotlib.pyplot as plt
 import numpy as np
 import random
 import MaxFlowUtils
@@ -76,15 +76,15 @@ else:
         # calculate maxflow using Ford-Fulkerson algorithm
         maxflow = FF(flownet, source, target)
         # plot flow network
-        MaxFlowUtils.plotFlowNetwork(stations, source, target, flow_edges)
-        plt.show()
+        # MaxFlowUtils.plotFlowNetwork(stations, source, target, flow_edges)
+        # plt.show()
         # flow_edges.append(FlowEdge(329, 330, totalDocks[329] + totalDocks[330]))
 
         # plot flow
         flowpath = MaxFlowUtils.flowPath(stations, flownet, source)
         flowpath2 = copy.copy(flowpath)
-        MaxFlowUtils.plotFlow(stations, source, target, flowpath)
-        plt.show()
+        # MaxFlowUtils.plotFlow(stations, source, target, flowpath)
+        # plt.show()
 
         # convert vertices in flow path to station names
         station_path = MaxFlowUtils.toStationNames(flowpath2, names)
@@ -103,8 +103,8 @@ else:
             print e
 
         # plot edges in st-cut
-        MaxFlowUtils.plotSTcut(stations, source, target, flowpath, stcut_v)
-        plt.show()
+        # MaxFlowUtils.plotSTcut(stations, source, target, flowpath, stcut_v)
+        # plt.show()
     else:
         print '{} and {} are not connected.'.format(start_station, end_station)
 
