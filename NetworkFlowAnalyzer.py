@@ -41,15 +41,13 @@ names = {}  # maps vertex number to stationNam
 vertex = {} # maps stationName to vertex number
 
 # store data
-row = 0
-for station in input["stationBeanList"]:
+for row, station in enumerate(input["stationBeanList"]):
 	# store data in numpy arrays
     totalDocks[row] = station["totalDocks"]
     stations[row][0] = station["latitude"]
     stations[row][1] = station["longitude"]
     vertex[station["stationName"]] = row
     names[row] = station["stationName"]
-    row += 1
 
 # process optional args
 if args.stations:
