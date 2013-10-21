@@ -31,8 +31,8 @@ def findFlowEdges(stations, totalDocks, source, capacity_func):
 	'''
 	flow_edges = collections.deque()
 	num_stations = len(stations)
-	marked_v = np.ones((num_stations,), dtype=bool) # marks all from vertices
-	marked_w = np.ones((num_stations,), dtype=bool) # marks all to vertices
+	marked_v = np.ones(num_stations, dtype=bool) # marks all from vertices
+	marked_w = np.ones(num_stations, dtype=bool) # marks all to vertices
 	# this feels like there should be an object
 	q = collections.deque()
 	q.append(source)
