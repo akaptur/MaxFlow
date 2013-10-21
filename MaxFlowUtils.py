@@ -7,7 +7,11 @@ _DISTANCE = .4 	# km
 
 # vectorized implementation
 def distance(v, stations):
-	'''find distance from v to all other vertices'''
+	'''
+	find distance from v to all other vertices
+	input: stations array of [(lat, long), (lat, long) ...] 
+	output: distance array of [dist, dist, ... ]
+	'''
 	stations = np.radians(stations)
 	R = 6371 # ?
 	dLat_dLong = stations - stations[v]
