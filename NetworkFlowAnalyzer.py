@@ -34,7 +34,7 @@ with open(args.filename) as f:
     input = json.load(f)
 
 num_stations = len(input["stationBeanList"])
-stations = np.random.random((num_stations, 2))  # 2 cols for latitude, longitude
+stations = np.zeros(shape=(num_stations, 2))  # 2 cols for latitude, longitude
 #totalDocks = np.zeros((num_stations,), dtype=np.uint8)
 totalDocks = np.zeros((num_stations,), dtype=np.int16)
 names = {}  # maps vertex number to stationNam
